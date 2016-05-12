@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<element type="cackle" group="Web Service">
+    <name>Cackle</name>
+    <author>Cackle</author>
+    <creationDate>Feb 2015</creationDate>
+    <copyright>Cackle</copyright>
+    <authorEmail>support@cackle.me</authorEmail>
+    <authorUrl>http://cackle.me</authorUrl>
+    <version>1.0.1</version>
+    <description>Cackle zoo integration</description>
+    <params>
+        <param name="default" type="radio" default="1" label="Enabled By Default" description="Enabled by default">
+            <option value="0">JNO</option>
+            <option value="1">JYES</option>
+        </param>
+    </params>
+    <params group="render">
+    </params>
+</element>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://dev.joomla.org/xml/1.6/template-install.dtd">
+<extension version="2.5" type="template" client="site">
+  <name>Jorge Correa</name>
+  <creationDate>23/04/15</creationDate>
+  <author>John Arley Arboleda Guerra</author>
+  <authorEmail>john@misideas.me</authorEmail>
+  <authorUrl>http://www.misideas.me</authorUrl>
+  <copyright>©2015 copy</copyright>
+  <license>comercial</license>
+  <version>1.0.0</version>
+  <description>Plantilla personalizada para el Sitio Web de Jorge Correa</description>
+  <files>
+    <filename>templateDetails.xml</filename>
+    <filename>index.php</filename>
+    <filename>template_thumbnail.png</filename>
+	<filename>template_preview.png</filename>
+    <filename>favicon.ico</filename>
+  </files>
+  <positions>
+  	<position>menu</position>
+	<position>redes</position>
+	<position>slogan</position>
+	<position>top</position>
+	<position>bottom</position>
+	<position>banner</position>
+	<position>menu-footer</position>
+	<position>mapa</position>
+	<position>contacto</position>
+	<position>iniciativas</position>
+	<position>right</position>
+  </positions>
+</extension>

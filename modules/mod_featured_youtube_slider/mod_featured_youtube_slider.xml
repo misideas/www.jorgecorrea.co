@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.0"
+	client="site"
+	method="upgrade">
+	<name>Featured YouTube Slider</name>
+	<creationDate>Nov 20th, 2014</creationDate>
+	<author>RBO Team</author>
+	<copyright>Copyright (C) 2009 - 2014 Open Source Matters. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>coretemplate@gmail.com</authorEmail>
+	<authorUrl>http://www.appsnity.com</authorUrl>
+	<version>3.1</version>
+	<description>FYOUTUBESLIDER</description>
+	<files>
+		<filename module="mod_featured_youtube_slider">mod_featured_youtube_slider.php</filename>
+		<filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+		<filename>css/style-responsive.css</filename>
+		<filename>css/index.html</filename>
+		<filename>library/contentslider.js</filename>
+		<filename>library/index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_featured_youtube_slider.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_featured_youtube_slider.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="youtubecode" type="textarea" default="1QP1hyy1Jpg,5B2LpyL_kro,fq4qP2oSpIA,EUDM78fXvvU,OwlynHlZEc4,waSam5dnWB4,-Vv3pnGt9Dc,NgkF0RS_05I,h2G7wDS2VuA,dxQ9LPeEYD0,1yuGlJ47s4M,me2-YK36ljc" label="CHARACTER" cols="15" rows="15" description="CHARACTERDESC" />
+				<field name="outer_color" type="color" default="#000" label="OUTER_CLR" description="OUTER_CLR_DESC" />
+				<field name="inner_color" type="color" default="#fff" label="INNER_CLR" description="INNER_CLR_DESC" />
+				<field name="show_info" type="radio" class="btn-group btn-group-yesno" default="1" label="SHOW_INFO" description="SHOW_INFO_DESC">
+					<option value="0">FYTDISABLE</option>
+					<option value="1">FYTENABLE</option>
+				</field>
+
+				<field name="player_ctrl_auto" type="list" class="btn-group btn-group-yesno" default="visible" label="PLAYER_CTRL" description="PLAYER_CTRL_DESC">
+					<option value="fadeout">FADEOUT</option>
+					<option value="slidein">SLIDEIN</option>
+					<option value="visible">VISIBLE</option>
+				</field>
+				<field name="player_ctrl_theme" type="radio" class="btn-group btn-group-yesno" default="light" label="PLAYER_CTRL_THEME" description="PLAYER_CTRL_THEME_DESC">
+					<option value="dark">THEME_DARK</option>
+					<option value="light">THEME_LIGHT</option>
+				</field>
+				<field name="player_ctrl_progress" type="radio" class="btn-group btn-group-yesno" default="red" label="PLAYER_CTRL_PROGRESS" description="PLAYER_CTRL_PROGRESS_DESC">
+					<option value="white">C_WHITE</option>
+					<option value="red">C_RED</option>
+				</field>
+				<field name="fullsc_btn" type="radio" class="btn-group btn-group-yesno" default="1" label="FULLSCREEN_BT" description="FULLSCREEN_BT_DESC">
+					<option value="0">FYTDISABLE</option>
+					<option value="1">FYTENABLE</option>
+				</field>
+				<field name="autoplay" type="radio" class="btn-group btn-group-yesno" default="1" label="AUTO_PLAY_1ST" description="AUTO_PLAY_1ST_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="num_vid" type="text" default="4" label="NUMBER" description="NUMBER_DESC" />
+				<field name="pagination_color" type="color" default="#0f0f0f" label="THUMB_BG" description="THUMB_BG_DESC" />
+				<field name="pagination_hover" type="color" default="#ccc" label="THUMB_HOVER" description="THUMB_HOVER_DESC" />
+				<field name="thumb_align" type="list" class="btn-group btn-group-yesno" default="center" label="THUMB_ALIGN" description="THUMB_ALIGN_DESC">
+					<option value="left">LEFT</option>
+					<option value="right">RIGHT</option>
+					<option value="center">CENTER</option>
+				</field>
+			</fieldset>
+			<fieldset name="responsive-config" label="RESPONSIVECONFIGURATION" description="RESPONSIVECONFIGURATION_DESC">
+				<field name="thumb_correction" type="text" default="0" label="THUMB_CORRECTION" description="THUMB_CORRECTION_DESC" />
+				<field name="thumb_correction_m470" type="text" default="0" label="THUMB_CORRECTION_M470" description="THUMB_CORRECTION_M470_DESC" />
+				<field name="thumb_correction_m780" type="text" default="0" label="THUMB_CORRECTION_M780" description="THUMB_CORRECTION_M780_DESC" />
+			</fieldset>
+			<fieldset
+				name="advanced">
+				
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="MODULECLASSSUFFIX"
+					description="PARAMMODULECLASSSUFFIX" />
+
+				<field
+					name="cache"
+					type="radio" class="btn-group btn-group-yesno"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>	
